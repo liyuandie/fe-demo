@@ -27,8 +27,11 @@ touch README.md
 touch .gitignore
 git init
 git add .
+git add -f dist/index.html
 git commit -m'init'
 ```
+
+注意`.gitignore`中忽略了`dist/`因为这个是`npm run build`生成的， 但是`index.html`是需要的， 可以单独使用`git add -f dist/index.html`添加进去
 
 5. 配置 webpack 打包，添加 webpack.config.js， 创建框架文件， 包括`index.html`, `index.js`等
    参考 https://webpack.js.org/guides/getting-started/
@@ -52,3 +55,28 @@ npm i -D css-loader style-loader
 ```
 
 然后配置`webpack.config.js`文件
+
+9. unit test
+   参考：
+
+- https://dev.to/bnorbertjs/my-nodejs-setup-mocha--chai-babel7-es6-43ei
+- http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html
+- https://mochajs.org/
+
+  `--save-dev` === `-D`
+
+```bash
+npm install --save-dev mocha
+```
+
+由于 mocha 不支持 ES6， 需要用 babel 转化， 配置`.babelrc`
+执行:
+
+```bash
+./node_modules/.bin/mocha --require @babel/register test/**/*.js
+```
+
+注意， `--compilers`失效， 应该用`--require`: https://github.com/mochajs/mocha/wiki/compilers-deprecation
+
+配置`package.json`，添加`test`
+执行`npm test`测试代码
