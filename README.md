@@ -36,3 +36,19 @@ git commit -m'init'
 ```bash
 npm install -D webpack webpack-cli
 ```
+
+6. 打包`npm run build`
+
+7. 添加 JS 代码， export/import
+
+8. 添加 css 代码
+   参考：
+
+- https://webpack.js.org/loaders/css-loader/
+- 中文 https://webpack.docschina.org/loaders/css-loader/
+
+```bash
+npm i -D css-loader style-loader
+```
+
+然后配置`webpack.config.js`文件

@@ -1,17 +1,13 @@
-function component() {
-  let element = document.createElement("div");
+import { testFunc } from "./utils/math"; // import!!
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = "Hello webpack";
-
-  return element;
-}
+import css from "./somecss.css";
 
 function test() {
   const container = document.querySelector("#container");
+
+  container.innerHTML = testFunc(1, 2);
+
   container.style.color = "red";
 }
 
 test();
-
-document.body.appendChild(component());
