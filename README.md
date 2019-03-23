@@ -80,3 +80,16 @@ npm install --save-dev mocha
 
 配置`package.json`，添加`test`
 执行`npm test`测试代码
+
+10. github pages
+
+    参考：
+
+- https://pages.github.com/
+- https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages
+
+目前支持三种方式，
+
+- master 分支
+- gh-pages 分支
+- master 分支下的`doc/`目录， 简单起见，选这个， 直接把 dist 目录改为 doc 即可， 别忘了修改`webpack.config.js`。
