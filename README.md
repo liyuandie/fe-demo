@@ -95,3 +95,9 @@ npm install --save-dev mocha
 - master 分支下的`docs/`目录， 简单起见，选这个， 直接把 dist 目录改为 docs 即可， 别忘了修改`webpack.config.js`。
 
 然后在 github 项目的`settings`页面里面， 找到`GitHub Pages`那部分配置， 修改即可。
+可以通过 https://magicly.github.io/fe-demo/docs/ 访问了
+
+11. 热更新
+
+- https://webpack.docschina.org/guides/hot-module-replacement/
+- https://webpack.js.org/guides/hot-module-replacement
