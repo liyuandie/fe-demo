@@ -92,4 +92,6 @@ npm install --save-dev mocha
 
 - master 分支
 - gh-pages 分支
-- master 分支下的`doc/`目录， 简单起见，选这个， 直接把 dist 目录改为 doc 即可， 别忘了修改`webpack.config.js`。
+- master 分支下的`docs/`目录， 简单起见，选这个， 直接把 dist 目录改为 docs 即可， 别忘了修改`webpack.config.js`。
+
+然后在 github 项目的`settings`页面里面， 找到`GitHub Pages`那部分配置， 修改即可。
